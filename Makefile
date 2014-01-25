@@ -1,4 +1,4 @@
-prefix=/usr/local
+prefix=/usr
 bindir=$(prefix)/bin
 libdir=$(prefix)/lib
 mandir=$(prefix)/man
@@ -14,7 +14,7 @@ LDLIBS = -lbz2 $(zlibldflags) -llzma
 LDFLAGS =
 PYTHONS = python python3
 
-all: makedeltarpm applydeltarpm rpmdumpheader makedeltaiso applydeltaiso combinedeltarpm fragiso
+all: makedeltarpm applydeltarpm rpmdumpheader makedeltaiso applydeltaiso combinedeltarpm fragiso python
 
 python: _deltarpmmodule.so
 
