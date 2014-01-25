@@ -8,8 +8,8 @@ zlibbundled=$(zlibdir)/libz.a
 zlibldflags=$(zlibbundled)
 zlibcppflags=-I$(zlibdir)
 pylibprefix=/
-CFLAGS = -fPIC -O2 -Wall -g
-CPPFLAGS = -fPIC -DDELTARPM_64BIT -DBSDIFF_NO_SUF -DRPMDUMPHEADER=\"$(rpmdumpheader)\" $(zlibcppflags)
+CFLAGS += -fPIC -O2 -Wall -g
+CPPFLAGS += -fPIC -DDELTARPM_64BIT -DBSDIFF_NO_SUF -DRPMDUMPHEADER=\"$(rpmdumpheader)\" $(zlibcppflags)
 LDLIBS = -lbz2 $(zlibldflags) -llzma
 LDFLAGS =
 PYTHONS = python python3
